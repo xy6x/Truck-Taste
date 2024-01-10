@@ -1,96 +1,123 @@
 ![image](https://github.com/xy6x/Truck-Taste/assets/121990181/9c158659-accc-4ba0-ab7b-2bfa84335744)
 
 
+## Introduction
 
-Introduction
+
 we delighted to present Truck Taste, an innovative solution revolutionizing the way individuals and companies experience culinary delights at their events. Our platform is dedicated to connecting you with a curated selection of top-notch food trucks, offering a seamless and delightful experience for any occasion
 
 
-Table of Contents
-The Problem
-The Solution
-Dependencies
-Tools Used
-Endpoints
-The Problem
-Delay in finding food trucks
-Lack of knowledge about the rating and quality of this food truck
-Lack of knowledge about the services it provides
-The Solution
-Simplify the Ordering Process:
+## Table of Contents
 
-Ensure that your program's user interface is user-friendly and intuitive.
-Make the ordering process seamless and quick to encourage more companies to place orders.
-Enhance Customer Service:
+- [The Problem](#the-problem)
+- [The Solution](#the-solution)
+- [Dependencies](#dependencies)
+- [Tools Used](#tools-used)
+- [Endpoints](#endpoints)
 
+## The Problem
+
+1. **Delay in finding food trucks**
+2. **Lack of knowledge about the rating and quality of this food truck**
+3. **Failure to Verify the Safety Engineer's Certificate**
+4. **Lack of knowledge about the services it provides**
+
+
+
+## The Solution
+
+1. **Enhance Customer Service:**
 Provide robust customer support to address any issues that may arise.
 Use a ticketing system or chat service to improve communication with customers.
-Improve Search and Filtering:
 
+
+2. **Improve Search and Filtering:**
 Make searching for trucks and food items easy and effective.
 Offer filtering options to help companies quickly find suitable food trucks for their events.
-Offers and Promotions:
 
-Introduce special offers or promotions to incentivize companies to order through your program.
-Utilize promotional campaigns to raise awareness about your program and attract more companies.
-Technology Enhancement:
-
+3. **Technology Enhancement:**
 Improve your system to facilitate tracking of food trucks and real-time updates.
 Embrace modern technologies such as mobile applications to make ordering and tracking more efficient.
-Enhance Communication with Companies:
 
+
+4. **Enhance Communication with Companies:**
 Provide effective communication channels for companies to inquire and meet their needs.
 Consider conducting meetings or informational sessions to explain your program's services to local companies.
 
-Dependencies
-Lombok
-Validation
-Spring Web
-Spring Security
-Spring Data JPA
-MySQL Driver
-JUnit tests
-Tools Used
-Figma
-Postman
-XAMPP
-MySQL
-PowerPoint
-DataGrip
-Endpoints
-Engineer	Endpoint	Description
 
-Abdulaziz	/api/v1/review/getAllReviewsForEngineer	Get All Reviews For Engineer.
-Abdulaziz	/api/v1/review/getAllCustomerReviews	Get All Customer Reviews.
-Abdulaziz	/api/v1/review/getRatingsBetween/{rate1}/{rate2}	Get Ratings Between reate 1 and rate 2.
-Abdulaziz	/api/v1/review/getRatingByContent/{content}	Get Rating By Content.
-Abdulaziz	/api/v1/request/acceptRequest/{request_id}`	Accept Request.
-Abdulaziz	/api/v1/request/rejectRequest/{request_id}	Reject Request.
-Abdulaziz	/api/v1/request/getRequestForEngineer	Get Request For Engineer.
-Abdulaziz	/api/v1/request/getRequestByStatus/{status}	Get Request By Status.
-Abdulaziz	/api/v1/place/getPlaceForCustomer 	Get Place For Customer.
-Abdulaziz	/api/v1/place/getPlaceById/{id} 	Get Place By Id.
-Abdulaziz	/api/v1/place/getPlaceByType/{type} 	Get Place By Type.
-Abdulaziz	/api/v1/message/getMessagesForCustomer	Get Messages For Customer.
-Abdulaziz	/api/v1/message/getMessagesContain/{content} 	Get Messages Contain.
-Abdulaziz	/api/v1/certification/getCertificationById/{id}	Get Certification By Id.
-Abdulaziz	/api/v1/certification/getCertificationForEngineer	Get Certification For Engineer.
-Abdulaziz	/api/v1/certification/getCertificationForCustomer	Get Certification For Customer.
-Abdulaziz	/api/v1/certification/getByVisitorDate/{date} 	Get By Visitor Date.
-Abdulaziz	/api/v1/certification/getByFinishDate/{date}	Find Review By Id.
-Faisal	/api/v1/customer/getById/{customerId}	Endpoint to get customer by ID.
-Faisal	/api/v1/customer/getByUsername/{username}	Endpoint to get customer by username.
-Faisal	/api/v1/customer/count	Endpoint to get customer count.
-Faisal	/api/v1/customer/updateEmail/{newEmail}	Endpoint to update customer email.
-Faisal	/api/v1/customer/getByCR/{cr}	Endpoint to get customer by CR.
-Faisal	/api/v1/engineer/ordered-by-experienceDESC	Ordered By Experience DESC.
-Faisal	/api/v1/engineer/ordered-by-experienceASC	Ordered by experience ASC.
-Faisal	/api/v1/engineer/getEngineersBetweenRate/{rate1}/{rate2}	Get Engineers Between Rate1 and reate2 .
-Faisal	/api/v1/report/getReportsByCustomer	Get Reports By Customer.
-Faisal	/api/faisal/getReportsByEngineer	Get Reports By Engineer.
-Faisal	/api/faisal/getReportById/{id}	Get Report By Id.
-Faisal	/api/v1/auth/users/role/{role}	Get users by role.
-Faisal	/api/v1/auth/user/check-username/{username}	Check if username is available.
-Faisal	/api/v1/auth/user/check-email/{email}	Check if email is available.
-Faisal	/api/v1/auth/user/lock/{id}	Lock user account.
-Faisal	/api/v1/auth/user/unlock/{id}	Unlock user account.
+## Dependencies
+
+- Lombok
+- Validation
+- Spring Web
+- Spring Security
+- Spring Data JPA
+- MySQL Driver
+-  JUnit tests
+
+## Tools Used
+
+- Figma
+- Postman
+- XAMPP
+- MySQL
+- PowerPoint
+- DataGrip
+
+## API Endpoints
+
+### Yousef's Endpoints
+
+| Endpoint                                     | Description                             |
+| -------------------------------------------- | --------------------------------------- |
+| `/api/v1/order/put/{id}`                     | Update order by ID                      |
+| `/api/v1/order/delete/{id}`                  | Delete order by ID                      |
+| `/api/v1/order/getById/{id}`                 | Get order by ID                         |
+| `/api/v1/evaluation/add`                     | Add evaluation                          |
+| `/api/v1/evaluation/update`                  | Update evaluation                       |
+| `/api/v1/food/endOrder/{id}`                 | End order                               |
+| `/api/v1/food/reject/{id}`                   | Reject order                            |
+| `/api/v1/food/accept/{id}`                   | Accept order                            |
+| `/api/v1/order/getByFoodTruckId/{id}`       | Get orders by Food Truck ID             |
+| `/api/v1/order/getByTotalPrice/{totalPrice}` | Get orders by total price range         |
+| `/api/v1/order/getByDate/{start}/{end}`      | Get orders by date range                |
+| `/api/v1/order/getByEqualDate/{date}`        | Get orders on a specific date           |
+| `/api/v1/profile/get`                        | Get profiles                            |
+| `/api/v1/profile/getById/{id}`               | Get profile by ID                       |
+| `/api/v1/category/add`                       | Add category                            |
+| `/api/v1/category/put/{id}`                  | Update category by ID                   |
+| `/api/v1/address/get`                        | Get addresses                           |
+| `/api/v1/address/getByCity/{city}`           | Get addresses by city                   |
+| `/api/v1/service/add`                        | Add service                             |
+| `/api/v1/service/put/{id}`                   | Update service by ID                    |
+| `/api/v1/ticket/add`                         | Add ticket                              |
+| `/api/v1/ticket/put/{Id}`                    | Update ticket by ID                     |
+| `/api/v1/ticket/delete/{id}`                 | Delete ticket by ID                     |
+
+### Roaa's Endpoints
+
+| Endpoint                                     | Description                             |
+| -------------------------------------------- | --------------------------------------- |
+| `/api/v1/food/add`                           | Add food                                |
+| `/api/v1/user/evaluation/{men}/{mix}`        | User evaluation                         |
+| `/api/v1/user/food/{number}`                 | User food                               |
+| `/api/v1/user/check`                         | Check user                              |
+| `/api/v1/user/best/{number}/{re}`            | User best                               |
+| `/api/v1/evaluation/get`                     | Get evaluations                         |
+| `/api/v1/evaluation/add`                     | Add evaluation                          |
+| `/api/v1/order/getById/{id}`                 | Get order by ID                         |
+| `/api/v1/profile/add`                        | Add profile                             |
+| `/api/v1/profile/put/{id}`                   | Update profile by ID                    |
+| `/api/v1/category/get`                       | Get categories                          |
+| `/api/v1/address/add`                        | Add address                             |
+| `/api/v1/address/put{id}`                    | Update address by ID                    |
+| `/api/v1/service/get`                        | Get services                            |
+| `/api/v1/service/getByFoodTruck/{name}`      | Get services by Food Truck name         |
+| `/api/v1/ticket/getById`                     | Get ticket by ID                        |
+| `/api/v1/order/add`                          | Add order                               |
+
+
+## View prototype | API Documentation | UseCase | UML
+<a href="https://www.figma.com/proto/JJikaT8beJw2m746uZKXkA/Website-of-architects---free-website-(Community)?type=design&node-id=656-713&t=JpIV0OZAKZPpfitE-0&scaling=min-zoom&page-id=578%3A142"><img src="https://github.com/fenazi22/Etmam/blob/main/Figma.png" alt="Figma" width="150" height="100"></a>
+<a href="https://documenter.getpostman.com/view/31172738/2s9YsKhXov"><img src="https://github.com/fenazi22/Etmam/blob/main/PostMan.png" alt="Postman" width="150" height="100"></a>
+
